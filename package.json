@@ -1,0 +1,16 @@
+{
+  "name": "kotoba-replay",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test app.test.mjs anki-connect.test.mjs local-state.test.mjs && python3 -m unittest discover -s scripts -p 'test_*.py'",
+    "build": "esbuild app.mjs --bundle --format=esm --target=es2022 --outfile=app.bundle.mjs",
+    "start": "python3 -m http.server 8748 --bind 127.0.0.1 --directory ."
+  },
+  "dependencies": {
+    "ts-fsrs": "^5.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

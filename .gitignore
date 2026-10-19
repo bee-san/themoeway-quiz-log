@@ -1,0 +1,27 @@
+# Local dependencies and generated build output
+node_modules/
+app.bundle.mjs
+webroot/
+dist/
+site/
+server.py
+server_test.py
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Private or per-device state: never publish quiz progress or databases
+data/kotoba-replay.sqlite3*
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+themoeway-quiz-backup*.json
+kotoba-replay-backup*.json
+
+# Credentials
+.env
+.env.*
+!.env.example
